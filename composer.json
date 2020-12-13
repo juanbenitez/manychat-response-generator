@@ -1,20 +1,21 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "juanbenitez/manychat-response-generator",
+    "description": "PHP package to generate Manychat JSON responses for bots.",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "juanbenitez",
+        "manychat",
+        "bot",
+        "chatbot",
+        "json"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/juanbenitez/manychat-response-generator",
     "license": "MIT",
-    "authors": [
-        {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://spatie.be",
-            "role": "Developer"
-        }
-    ],
+    "authors": [{
+        "name": "Juan Benitez",
+        "email": "toni.benitez@gmail.com",
+        "homepage": "https://juanbenitez.net",
+        "role": "Developer"
+    }],
     "require": {
         "php": "^7.4"
     },
@@ -25,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Juanbenitez\\ManychatResponseGenerator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Juanbenitez\\ManychatResponseGenerator\\Tests\\": "tests"
         }
     },
     "scripts": {
