@@ -2,7 +2,6 @@
 namespace Juanbenitez\ManychatResponseGenerator\Components\Buttons;
 
 use Juanbenitez\ManychatResponseGenerator\Traits\Gotoable;
-use Juanbenitez\ManychatResponseGenerator\Components\Buttons\Go;
 
 class Flow extends Button
 {

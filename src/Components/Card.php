@@ -2,8 +2,8 @@
 
 namespace Juanbenitez\ManychatResponseGenerator\Components;
 
-use Juanbenitez\ManychatResponseGenerator\Exceptions\ValidationError;
 use Juanbenitez\ManychatResponseGenerator\Exceptions\EmptyRequiredAttribute;
+use Juanbenitez\ManychatResponseGenerator\Exceptions\ValidationError;
 
 class Card
 {
@@ -27,7 +27,6 @@ class Card
         );
         $this->setUrl($image_url);
         $this->setActionUrl($action_url);
-
     }
 
     public static function make($title, $subtitle = '', $image_url = '', $action_url = '')
@@ -59,24 +58,26 @@ class Card
             );
         }
         $this->subtitle = $subtitle;
+
         return $this;
     }
 
     public function setActionUrl($actionUrl)
     {
         $this->actionUrl = $actionUrl;
+
         return $this;
     }
 
     public function toArray(): array
     {
         $structure = [
-            'title'     => $this->title,
-            'subtitle'  => $this->subtitle,
+            'title' => $this->title,
+            'subtitle' => $this->subtitle,
             'image_url' => $this->url,
             'action_url' => $this->actionUrl,
         ];
-        if (!empty($this->buttons)) {
+        if (! empty($this->buttons)) {
             foreach ($this->buttons as $button) {
                 $structure['buttons'][] = $button->toArray();
             }
@@ -84,5 +85,4 @@ class Card
 
         return $structure;
     }
-
 }

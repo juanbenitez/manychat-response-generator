@@ -2,8 +2,8 @@
 
 namespace Juanbenitez\ManychatResponseGenerator\Messages;
 
-use Juanbenitez\ManychatResponseGenerator\Components\MediaComponent;
 use Juanbenitez\ManychatResponseGenerator\Components\ButtonCollection;
+use Juanbenitez\ManychatResponseGenerator\Components\MediaComponent;
 
 class Video extends Message
 {
@@ -25,8 +25,8 @@ class Video extends Message
     public function toArray(): array
     {
         $structure['type'] = $this->type;
-        $structure['url']  = $this->url;
-        if (!empty($this->buttons)) {
+        $structure['url'] = $this->url;
+        if (! empty($this->buttons)) {
             foreach ($this->buttons as $button) {
                 $structure['buttons'][] = $button->toArray();
             }
