@@ -9,5 +9,5 @@ class InvalidImageAspectRatio extends \Exception
         return new self(
             sprintf('Invalid image aspect ratio: %s', $ratio)
         );
-    }    
+    }
 }

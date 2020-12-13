@@ -2,9 +2,8 @@
 
 namespace Juanbenitez\ManychatResponseGenerator\Components\Buttons;
 
-use Juanbenitez\ManychatResponseGenerator\Components\Buttons\Button;
-use Juanbenitez\ManychatResponseGenerator\Exceptions\EmptyRequiredAttribute;
 use Juanbenitez\ManychatResponseGenerator\Exceptions\Buttons\InvalidWebViewSize;
+use Juanbenitez\ManychatResponseGenerator\Exceptions\EmptyRequiredAttribute;
 
 class Url extends Button
 {
@@ -35,7 +34,7 @@ class Url extends Button
 
     public function setWebViewSize($size)
     {
-        if (!in_array($size, self::WEBVIEW_SIZES)) {
+        if (! in_array($size, self::WEBVIEW_SIZES)) {
             throw InvalidWebViewSize::withSize($size);
         }
         $this->webview_size = $size;
@@ -44,9 +43,9 @@ class Url extends Button
     public function toArray()
     {
         return [
-            'type'    => $this->type,
+            'type' => $this->type,
             'caption' => $this->caption,
-            'url'     => $this->url
+            'url' => $this->url,
         ];
     }
 }

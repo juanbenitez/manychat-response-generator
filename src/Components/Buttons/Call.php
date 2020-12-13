@@ -2,7 +2,6 @@
 
 namespace Juanbenitez\ManychatResponseGenerator\Components\Buttons;
 
-use Juanbenitez\ManychatResponseGenerator\Components\Buttons\Button;
 use Juanbenitez\ManychatResponseGenerator\Exceptions\EmptyRequiredAttribute;
 
 class Call extends Button
@@ -31,9 +30,9 @@ class Call extends Button
     public function toArray()
     {
         return [
-            'type'    => $this->type,
+            'type' => $this->type,
             'caption' => $this->caption,
-            'phone'   => $this->phone
+            'phone' => $this->phone,
         ];
     }
 }
