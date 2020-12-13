@@ -1,13 +1,12 @@
 <?php
 namespace Juanbenitez\ManychatResponseGenerator\Actions;
 
-use ArrayAccess;
-use Juanbenitez\ManychatResponseGenerator\Traits\Arrayable;
 use Juanbenitez\ManychatResponseGenerator\Exceptions\Buttons\InvalidActionType;
+use Juanbenitez\ManychatResponseGenerator\Traits\Arrayable;
 
 abstract class Action implements Arrayable
 {
-    const ADD_TAG    = 'add_tag';
+    const ADD_TAG = 'add_tag';
     const REMOVE_TAG = 'remove_tag';
     const VALID_ACTION_TYPES = [self::ADD_TAG, self::REMOVE_TAG];
 
@@ -20,11 +19,9 @@ abstract class Action implements Arrayable
     
     public function setType(string $type): void
     {
-        if (!in_array($type, self::VALID_ACTION_TYPES)) {
+        if (! in_array($type, self::VALID_ACTION_TYPES)) {
             throw InvalidActionType::withType($type);
         }
         $this->type = $type;
     }
-
-
 }

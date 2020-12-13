@@ -17,13 +17,12 @@ abstract class Message
 
     public function setType($type): void
     {
-
-        if (!in_array($type, self::VALID_MESSAGE_TYPES)) {
+        if (! in_array($type, self::VALID_MESSAGE_TYPES)) {
             throw InvalidMessageType::withType($type);
         }
 
         $this->type = $type;
     }
 
-    public abstract function toArray();
+    abstract public function toArray();
 }

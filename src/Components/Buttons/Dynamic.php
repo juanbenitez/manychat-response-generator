@@ -1,12 +1,10 @@
 <?php
 namespace Juanbenitez\ManychatResponseGenerator\Components\Buttons;
 
-use Juanbenitez\ManychatResponseGenerator\Components\Buttons\Button;
-
 class Dynamic extends Button
 {
     protected $url;
-    protected $method  = 'GET';
+    protected $method = 'GET';
     protected $headers = [];
     protected $payload = [];
 
@@ -27,25 +25,28 @@ class Dynamic extends Button
     public function setUrl($url)
     {
         $this->url = $url;
+
         return $this;
     }
 
     public function setMethod($method)
     {
         $this->method = $method;
+
         return $this;
     }
 
     public function addHeader($key, $value)
     {
         $this->headers[$key] = $value;
+
         return $this;
     }
 
     public function setHeaders(array $headers)
     {
         $this->headers = array_merge(
-            $this->headers, 
+            $this->headers,
             $headers
         );
     }
@@ -53,7 +54,7 @@ class Dynamic extends Button
     public function setPayload(array $payload)
     {
         $this->payload = array_merge(
-            $this->payload, 
+            $this->payload,
             $payload
         );
     }
@@ -61,16 +62,17 @@ class Dynamic extends Button
     public function addPayload($key, $value)
     {
         $this->payload[$key] = $value;
+
         return $this;
     }
 
     public function toArray()
     {
         return [
-            'type'    => $this->type,
+            'type' => $this->type,
             'caption' => $this->caption,
-            'url'     => $this->url,
-            'method'  => $this->method,
+            'url' => $this->url,
+            'method' => $this->method,
             'headers' => $this->headers,
             'payload' => $this->payload,
         ];

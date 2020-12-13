@@ -2,8 +2,8 @@
 
 namespace Juanbenitez\ManychatResponseGenerator\Messages;
 
-use Juanbenitez\ManychatResponseGenerator\Components\MediaComponent;
 use Juanbenitez\ManychatResponseGenerator\Components\ButtonCollection;
+use Juanbenitez\ManychatResponseGenerator\Components\MediaComponent;
 
 class Image extends Message
 {
@@ -30,8 +30,8 @@ class Image extends Message
     public function toArray()
     {
         $structure['type'] = $this->type;
-        $structure['url']  = $this->url;
-        if (!empty($this->buttons)) {
+        $structure['url'] = $this->url;
+        if (! empty($this->buttons)) {
             foreach ($this->buttons as $button) {
                 $structure['buttons'][] = $button->toArray();
             }
