@@ -25,7 +25,7 @@ class File extends Message
     {
         return [
             'type' => $this->type,
-            'url' => $this->url,
+            'url'  => $this->url,
         ];
     }
 }

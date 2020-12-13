@@ -2,11 +2,11 @@
 
 namespace Juanbenitez\ManychatResponseGenerator\Tests\Messages;
 
+use PHPUnit\Framework\TestCase;
+use Juanbenitez\ManychatResponseGenerator\Messages\Text;
 use Juanbenitez\ManychatResponseGenerator\Components\Buttons\Call;
 use Juanbenitez\ManychatResponseGenerator\Components\Buttons\Url;
 use Juanbenitez\ManychatResponseGenerator\Exceptions\TextMessage\InvalidEmptyText;
-use Juanbenitez\ManychatResponseGenerator\Messages\Text;
-use PHPUnit\Framework\TestCase;
 
 class TextMessageTest extends TestCase
 {
@@ -47,7 +47,7 @@ class TextMessageTest extends TestCase
     {
         $textMock = [
             'type' => 'text',
-            'text' => 'hello world',
+            'text' => 'hello world'
         ];
 
         $textWithButtonsMock = [
@@ -63,8 +63,8 @@ class TextMessageTest extends TestCase
                     'type' => 'url',
                     'caption' => 'Caption2',
                     'url' => 'https://google.com',
-                ],
-            ],
+                ]
+            ]
         ];
 
         $textMessage = Text::make('hello world');

@@ -2,8 +2,8 @@
 
 namespace Juanbenitez\ManychatResponseGenerator\Tests\Buttons;
 
-use Juanbenitez\ManychatResponseGenerator\Exceptions\Buttons\InvalidButtonType;
 use PHPUnit\Framework\TestCase;
+use Juanbenitez\ManychatResponseGenerator\Exceptions\Buttons\InvalidButtonType;
 
 class ButtonTest extends TestCase
 {

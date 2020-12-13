@@ -22,9 +22,9 @@ trait Gotoable
     public function toArray()
     {
         return [
-            'type' => $this->type,
+            'type'    => $this->type,
             'caption' => $this->caption,
-            'target' => $this->target,
+            'target'  => $this->target
         ];
     }
 }

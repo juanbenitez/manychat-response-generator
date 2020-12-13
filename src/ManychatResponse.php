@@ -4,6 +4,7 @@ namespace Juanbenitez\ManychatResponseGenerator;
 
 use Juanbenitez\ManychatResponseGenerator\Exceptions\JsonEncodingError;
 
+
 class ManychatResponse implements \JsonSerializable
 {
     private $version = 'v2';
@@ -34,19 +35,18 @@ class ManychatResponse implements \JsonSerializable
     public function addAction($action)
     {
         $this->content['actions'][] = $action;
-
         return $this;
     }
 
     public function send()
     {
-        print($this->toJson(JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+        print($this->toJson(JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));   
     }
 
     public function toArray()
     {
-        $response['messages'] = [];
-        $response['actions'] = [];
+        $response['messages']      = [];
+        $response['actions']       = [];
         $response['quick_replies'] = [];
 
         if ($this->content) {
@@ -64,14 +64,13 @@ class ManychatResponse implements \JsonSerializable
                 $response['quick_replies'][] = $qReply->toArray();
             }
         }
-
         return [
             'version' => $this->version,
             'content' => [
-                'messages' => $response['messages'],
-                'actions' => $response['actions'],
-                'quick_replies' => [],
-            ],
+                'messages'      => $response['messages'],
+                'actions'       => $response['actions'],
+                'quick_replies' => []
+            ]
         ];
     }
 

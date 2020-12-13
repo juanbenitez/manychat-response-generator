@@ -9,7 +9,7 @@ class Cards extends Message
 {
     const CARDS_TYPE = 'cards';
     const HORIZONTAL_ASPECT_RATIO = 'horizontal';
-    const SQUARE_ASPECT_RATIO = 'square';
+    const SQUARE_ASPECT_RATIO     = 'square';
 
     const VALID_IMAGE_ASPECT_RATIOS = [self::HORIZONTAL_ASPECT_RATIO, self::SQUARE_ASPECT_RATIO];
 
@@ -30,7 +30,7 @@ class Cards extends Message
 
     public function setImageAspectRatio($imageAspectRatio)
     {
-        if (! in_array($imageAspectRatio, self::VALID_IMAGE_ASPECT_RATIOS)) {
+        if (!in_array($imageAspectRatio, self::VALID_IMAGE_ASPECT_RATIOS)) {
             throw InvalidImageAspectRatio::withRatio($imageAspectRatio);
         }
         $this->imageAspectRatio = $imageAspectRatio;
@@ -39,17 +39,16 @@ class Cards extends Message
     public function addCard(Card $card)
     {
         $this->elements[] = $card;
-
         return $this;
     }
 
     public function toArray()
     {
         $structure = [
-            'type' => $this->type,
-            'image_aspect_ratio' => $this->imageAspectRatio,
+            'type'     => $this->type,
+            'image_aspect_ratio'  => $this->imageAspectRatio,
         ];
-        if (! empty($this->elements)) {
+        if (!empty($this->elements)) {
             foreach ($this->elements as $card) {
                 $structure['elements'][] = $card->toArray();
             }

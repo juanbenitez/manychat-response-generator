@@ -9,7 +9,6 @@ trait ButtonCollection
     public function addButton($button)
     {
         $this->buttons[] = $button;
-
         return $this;
     }
     public function getButtons()

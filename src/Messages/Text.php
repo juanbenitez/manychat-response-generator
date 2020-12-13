@@ -41,7 +41,7 @@ class Text extends Message
     {
         $structure['type'] = $this->type;
         $structure['text'] = $this->text;
-        if (! empty($this->buttons)) {
+        if (!empty($this->buttons)) {
             foreach ($this->buttons as $button) {
                 $structure['buttons'][] = $button->toArray();
             }
