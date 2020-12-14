@@ -1,4 +1,4 @@
-# PHP package to generate Manychat dynamic JSON responses.
+# Manychat dynamic JSON response generator.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/juanbenitez/manychat-response-generator.svg?style=flat-square)](https://packagist.org/packages/juanbenitez/manychat-response-generator)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/juanbenitez/manychat-response-generator/run-tests?label=tests)](https://github.com/juanbenitez/manychat-response-generator/actions?query=workflow%3Arun-tests+branch%3Amaster)
