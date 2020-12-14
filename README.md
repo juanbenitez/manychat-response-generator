@@ -1,9 +1,9 @@
 # Manychat dynamic JSON response generator.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/juanbenitez/manychat-response-generator.svg?style=for-the-badge)](https://packagist.org/packages/juanbenitez/manychat-response-generator)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/juanbenitez/manychat-response-generator/Tests?label=tests&style=for-the-badge)](https://github.com/juanbenitez/manychat-response-generator/actions?query=workflow%3ATests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/juanbenitez/manychat-response-generator.svg?style=for-the-badge)](https://packagist.org/packages/juanbenitez/manychat-response-generator)
-[![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/juanbenitez/manychat-response-generator?style=for-the-badge)](https://img.shields.io/packagist/php-v/juanbenitez/manychat-response-generator?style=for-the-badge)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/juanbenitez/manychat-response-generator.svg?style=flat-square)](https://packagist.org/packages/juanbenitez/manychat-response-generator)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/juanbenitez/manychat-response-generator/Tests?label=tests&style=flat-square)](https://github.com/juanbenitez/manychat-response-generator/actions?query=workflow%3ATests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/juanbenitez/manychat-response-generator.svg?style=flat-square)](https://packagist.org/packages/juanbenitez/manychat-response-generator)
+[![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/juanbenitez/manychat-response-generator?style=flat-square)](https://img.shields.io/packagist/php-v/juanbenitez/manychat-response-generator?style=flat-square)
 
 
 This package allows you to generate Manychat dynamic Json responses easily within your PHP projectsgit. Please refer to this link to learn more about [Manychat dynamic responses format.](https://manychat.github.io/dynamic_block_docs/)
