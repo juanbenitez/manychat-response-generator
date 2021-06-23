@@ -1,7 +1,7 @@
 <?php
 namespace Juanbenitez\ManychatResponseGenerator\Actions;
 
-use Juanbenitez\ManychatResponseGenerator\Exceptions\Buttons\InvalidActionType;
+use Juanbenitez\ManychatResponseGenerator\Exceptions\Actions\InvalidActionType;
 use Juanbenitez\ManychatResponseGenerator\Traits\Arrayable;
 
 abstract class Action implements Arrayable
