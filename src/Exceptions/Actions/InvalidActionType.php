@@ -1,6 +1,6 @@
 <?php
 
-namespace Juanbenitez\ManychatResponseGenerator\Exceptions\Buttons;
+namespace Juanbenitez\ManychatResponseGenerator\Exceptions\Actions;
 
 class InvalidActionType extends \Exception
 {
